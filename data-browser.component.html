@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-xs-2 classes-container">
+        <ul id="dataStores" class="list-group">
+            <li class="list-group-item list-group-item-warning text-center">
+                <label>DataStore Classes</label>
+            </li>
+            <li class="list-group-item" *ngFor="let class of compDS"
+                (click)="selectClass(class);"
+                [ngClass]="{'list-group-item-primary': selectedClass.name !== class.name, 'list-group-item-success': selectedClass.name === class.name}">
+                {{class.name}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-10 content-container">
+            <div class="col-xs-9 row">
+                <div class="input-group ">
+                    <span class="input-group-addon">Query: </span>
+                    <input type="text" class="form-control" id="queryInput" [(ngModel)]="queryString"/>
+                    <span class="input-group-btn"><button class="btn btn-primary" type="button"
+                                                          (click)="setDataSource()">Search</button></span>
+                </div>
+            </div>
+            <div class="row col-xs-12 grid-container">
+                <ag-grid-angular #agGrid class="ag-blue" [gridOptions]="gridOptions"
+                                  *ngIf="gridFlag">
+                </ag-grid-angular>
+            </div>
+    </div>
+</div>
+
