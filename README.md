@@ -27,5 +27,5 @@ export class DsService {
 
 export {ds}
 ```
-And we run makeDS() else where in the project. I have no idea if this is a good idea, but it releases us from the .then promise syntax, so thats pretty neat. 
+And we run makeDS() else where in the project. I have no idea if this is a good idea, but it releases us from the .then promise syntax, so thats pretty neat. Also, those return statements look a little weird, but we use them in a canActivate method for our angular routes, and it doesnt affect creating the ds in other contexts.
 
