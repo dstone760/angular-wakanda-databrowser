@@ -1,6 +1,8 @@
 # angular-wakanda-databrowser
 An angular component which displays the data in a wakanda server via the wakanda javascript client. Uses bootstrap and ag-grid as well. 
 
+This component is supposed to be for only viewing the data, not creating, updating, or deleting it. We could add that functionality down the line, but for now it is not our focus.
+
 This repo is NOT supposed to be universal. I just wanted to share our solution for others to gain ideas about how to approach the problem of displaying wakanda data in angular 2. 
 
 The HTML and CSS file are left uncommented since thats mostly just bootstrap and styling. I will include a screenshot of how the page looks on my end.
